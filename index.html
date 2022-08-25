@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<title>Progres Bar</title>
+</head>
+<body>
+<section class="mainsection">
+
+	<!-- fixed header for progres bar -->
+
+	<div class="header">
+		<h2>Scroll Indicator</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+	</div>
+
+	<!-- rough content to get scrollefect -->
+
+	<div class="othercontent">
+		<div class="img1">
+			<img src="image/demo1.png">
+			<label>This is demo image.</label>
+		</div>
+		<div class="img2">
+			<img src="image/demo2.png">
+			<label>This is demo image.</label>
+		</div>	
+		<div class="img3">
+			<img src="image/demo3.png">
+			<label>This is demo image.</label>
+		</div>
+		<div class="img4">
+			<img src="image/demo4.png">
+			<label>This is demo image.</label>
+		</div>
+		<div class="img5">
+			<img src="image/demo5.png">
+			<label>This is demo image.</label>
+		</div>
+	</div>
+</section>
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+</body>
+</html>
